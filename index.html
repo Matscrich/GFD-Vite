@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Screen vite</title>
+    <link rel="stylesheet" href="styles_v3.css">
+</head>
+
+<body style="background-color:black">
+    <div class="topBar" >
+
+        <button onclick= "soundBtnToggle()" class="btnScreen2" Id="soundBtn" >sound <br> off</button>
+        <button onclick="musicBtnToggle()" class="btnScreen2" Id="musicBtn" >music <br> off</button>
+        
+        <button class="btnScreen2 restartBtn" onclick="document.location='Screen1_v3.html'"> restart <br> game</button>
+    </div>
+    
+    <!--
+    <div class="game">
+        GAME VIEW
+    </div>
+     -->
+
+    <div class="bottomBar" >
+        <p class="instruction2">
+         <span class="inst_arrow">&#129136;</span> = steer left
+         <span class="inst_arrow">&#129139;</span> = brake
+         <span class="inst_arrow">&#129137;</span> = accelerate
+         <span class="inst_arrow">&#129138;</span> = steer right
+         <br> <span  class="inst_spacebar">SPACEBAR</span> = HANDBRAKE
+         <br> "R" will reset you if you crash
+        </p>
+        <img class="logo_bottom" src="\images\logo_hi.png" alt="Logo of the band"/>
+    </div>
+</body>
+<script>
+    function musicBtnToggle () {
+        const musicBtn= document.getElementById("musicBtn").innerHTML
+        if (musicBtn === "music <br> off"){
+            document.getElementById("musicBtn").innerHTML= "music <br> OFF"
+        } else {
+            document.getElementById("musicBtn").innerHTML= "music <br> off"
+        }
+    }
+    function soundBtnToggle () {
+        const soundBtn= document.getElementById("soundBtn").innerHTML
+        if (soundBtn === "sound <br> off"){
+            document.getElementById("soundBtn").innerHTML= "sound <br> OFF"
+        } else {
+            document.getElementById("soundBtn").innerHTML= "sound <br> off"
+        }
+    }
+</script>
+
+<script type="module" src="main.js"></script>
+
+</html>
